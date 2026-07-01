@@ -17,9 +17,9 @@ export default function Home() {
   };
 
   return (
-    <main style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+    <main style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10 }}>
       <h1 style={{fontSize: 32}}>BookFinder</h1>
-      <form onSubmit={handleSubmit} style={{display: "flex", gap: 8}}>
+      <form onSubmit={handleSubmit} style={{display: "flex", gap: 10}}>
         <input type="text"
         value={query}
         onChange={e => setQuery(e.target.value)}
