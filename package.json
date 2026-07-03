@@ -2,10 +2,12 @@
   "name": "bookfinder2.0",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://densemenyuk.github.io/bookfinder2.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deply": "npm run build && npm run export",
     "lint": "eslint"
   },
   "dependencies": {
