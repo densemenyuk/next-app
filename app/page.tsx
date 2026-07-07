@@ -42,10 +42,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 via-blue-100 to-white w-full">
+    <div className="min-h-screen bg-gradient-to-br from-sky-100 via-blue-100 to-white w-full">
       <div className="flex flex-col min-h-screen justify-start items-center py-16">
-        <div className="w-full max-w-lg bg-white/90 shadow-md rounded-2xl p-8 mb-10 border border-violet-200">
-          <h1 className="text-3xl font-bold text-violet-700 mb-5 text-center tracking-tight drop-shadow-md">BookFinder</h1>
+        <div className="w-full max-w-lg bg-white/90 shadow-md rounded-2xl p-8 mb-10 border border-sky-200">
+          <h1 className="text-3xl font-bold text-sky-700 mb-5 text-center tracking-tight drop-shadow-md">BookFinder</h1>
           <form 
           onSubmit={handleSearch}
           className="flex gap-3 justify-center"
@@ -55,12 +55,13 @@ export default function Home() {
             value={query}
             onChange={e =>setQuery(e.target.value)}
             placeholder="Ввудите название книги или автора"
-            className="flex-1 px-4 py-3 rounded-lg border-2 border-violet-200 focus:outline-none focus:ring-violet-300 font-medium bg-white"
+            className="flex-1 px-4 py-3 rounded-lg border-2 border-sky-200 focus:outline-none focus:ring-sky-300 font-medium bg-white"
             />
 
             <button 
             type="submit"
-            className="px-6 py-3 rounded-lg bg-violet-600 text-white font-semibold shadow hover:bg-violet-700 active:scale=95 transition"
+            className="cursor-pointer px-6 py-3 rounded-lg bg-sky-600 text-white font-semibold shadow hover:bg-sky-700 active:scale=95 transition"
+            
             >
               Искать
             </button>
@@ -70,7 +71,7 @@ export default function Home() {
       {/*Ответ по поиску*/}
       <div className="w-full max-w-3xl space-y-7">
         {loading && (
-          <div className="text-center text-lg text-lg text-violet-700 font-bold animate-pulse">
+          <div className="text-center text-lg text-lg text-sky-700 font-bold animate-pulse">
             Загрузка...
           </div>
         )}
@@ -84,9 +85,9 @@ export default function Home() {
         {books.map(book => {
           const v = book.volumeInfo;
           return (
-            <div 
+            <div
             key={book.id}
-            className="flex flex-col sm:flex-row gap-5 items-center bg-white rounded-xl shadow border border-violet-100 px-5 py-6 transition">
+            className="flex flex-col sm:flex-row gap-5 items-center bg-white rounded-xl shadow border border-sky-100 px-5 py-6 transition">
                 {v.imageLinks?.thumbnail ? (
                   <img src={v.imageLinks.thumbnail} alt={v.title}
                   className="w-28 h-40 object-contain flex-shrink-0 rounded-xl shadow border" 
@@ -95,7 +96,7 @@ export default function Home() {
                   <div className="w-28 h-40 bg-gray-100 flex items-centerjustify-center text-gray-400 rounded=xl">Нет&nbsp;обложки</div>
                 )}
                 <div className="flex-1">
-                  <h2 className="text-lg sm:text-xl font-bold text-violet-800 mb-1">
+                  <h2 className="text-lg sm:text-xl font-bold text-sky-800 mb-1">
                     {v.title}
                   </h2>
                   {v.authors && (
@@ -110,7 +111,7 @@ export default function Home() {
                     <a href={v.infoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-violet-600 font-semibold underline underline-offset-4 hover:text-blue-500 transition"
+                    className="text-sky-600 font-semibold underline underline-offset-4 hover:text-blue-500 transition"
                     >
                       Подробнее &rarr;
                     </a>
