@@ -54,7 +54,7 @@ export default function Home() {
             <input type="text"
             value={query}
             onChange={e =>setQuery(e.target.value)}
-            placeholder="Ввудите название книги или автора"
+            placeholder="Введите название книги или автора"
             className="flex-1 px-4 py-3 rounded-lg border-2 border-sky-200 focus:outline-none focus:ring-sky-300 font-medium bg-white"
             />
 
